@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add document</title>
+</head>
+<body>
+    <%= msg %> 
+   <form action="/add" method="post" enctype="multipart/form-data">
+    <input type="text" name="Name" placeholder="Name" id=""><br><br>
+    <textarea name="desc" id="" cols="30" rows="10"></textarea><br><br>
+    <input type="file" name="doc" accept="application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/pdf, application/vnd.ms-powerpoint, application/vnd.openxmlformats-officedocument.presentationml.presentation, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" placeholder="file" id="">
+    <button type="submit">Add</button>
+    </form> 
+</body>
+</html>

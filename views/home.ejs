@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <center><h2><%= Name %> </h2>
+    <a href="/add">add document</a></center>
+<hr>
+    <% if (userDoc.length>0) { %>
+        <% (userDoc).reverse().forEach(sch => { %>
+         <h3><%= sch.Name %> </h3>
+         <p><%= sch.desc %> </p><br>
+         <p><%= sch.date %> </p>
+         <a href="/delete/<%= sch._id %> ">Delete</a>
+         <a href="<%= sch.docLink %>"  download>Download</a>
+        <% }) %>
+    <% } else { %>
+     <center><h2>No Docs</h2>
+    <a href="/add">add item</a></center>
+    <% } %>
+</body>
+</html>
